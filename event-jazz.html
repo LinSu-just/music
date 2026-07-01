@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>Джазовый вечер в саду Эрмитаж — Точка ритма</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="event.css">
+</head>
+<body class="event-page">
+  <header>
+    <a class="logo" href="index.html" aria-label="Точка ритма"><img src="assets/logo.png" alt="Точка ритма"></a>
+    <nav aria-label="Основная навигация">
+      <a href="index.html#genres">Жанры</a>
+      <a href="index.html#events">События</a>
+      <a href="index.html#artists">Исполнители</a>
+      <a href="index.html#about">О проекте</a>
+    </nav>
+    <div class="actions">
+      <button class="favorites-toggle" aria-label="Избранное"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="favorite-count">0</span></button>
+      <button aria-label="Профиль"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.8 20a7.3 7.3 0 0 1 14.4 0"/><circle cx="12" cy="12" r="10"/></svg></button>
+      <button class="menu" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="jazz-hero">
+      <div class="jazz-copy">
+        <h1><em>Джазовый<br>вечер</em> в саду<br>Эрмитаж</h1>
+        <div class="event-facts">
+          <div><b>08</b><small>июня</small></div>
+          <div><b>19:00</b><small>мск. Москва</small></div>
+          <div><b>Сад<br>Эрмитаж</b></div>
+        </div>
+        <div class="jazz-actions">
+          <a href="checkout.html" class="button primary">Купить билеты</a>
+          <a href="#details" class="button secondary">Подробнее про Джаз</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="event-details content-section" id="details">
+      <h2>Подробнее о мероприятии</h2>
+      <div class="details-row">
+        <img src="assets/jazz-venue.png" alt="Беседка в саду Эрмитаж">
+        <p>Джазовый вечер в Саду «Эрмитаж» — это особенное событие под открытым небом, где музыка, природа и летний вечер создают неповторимую атмосферу.<br>Среди старинных аллей и мягкого света фонарей гостей ждет живое исполнение лучших джазовых композиций — от классических стандартов до современных импровизаций.<br>На сцене выступят талантливые музыканты, чьи мелодии наполнят пространство теплом, романтикой и свободой джаза. Это идеальная возможность провести вечер в кругу друзей, близких или насладиться музыкой в одиночестве, погрузившись в настроение.<br>Уютная атмосфера исторического сада, качественный звук и живое исполнение создадут незабываемые впечатления для всех ценителей хорошей музыки. Позвольте себе на несколько часов отвлечься от городской суеты и окунуться в мир джаза под открытым небом.</p>
+      </div>
+      <div class="event-gallery">
+        <img src="assets/jazz-gallery-1.png" alt="Джазовый концерт">
+        <img src="assets/jazz-gallery-2.png" alt="Сцена в саду">
+        <img src="assets/jazz-gallery-3.png" alt="Джаз в беседке">
+        <img src="assets/jazz-gallery-4.png" alt="Зрители концерта">
+      </div>
+    </section>
+
+    <section class="lineup content-section">
+      <h2>В программе вечера</h2>
+      <div class="lineup-grid">
+        <figure><img src="assets/band-diamond.png" alt="Diamond Jazz Orchestra"><figcaption>Diamond Jazz Orchestra</figcaption></figure>
+        <figure><img src="assets/band-moscow.png" alt="Moscow Jazz Collective"><figcaption>Moscow Jazz Collective</figcaption></figure>
+        <figure><img src="assets/band-velvet.png" alt="Velvet Groove Quartet"><figcaption>Velvet Groove Quartet</figcaption></figure>
+        <figure><img src="assets/band-midnight.png" alt="Midnight Brass Band"><figcaption>Midnight Brass Band</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><b>50+</b><span>жанров</span></div><div><b>1000+</b><span>исполнителей</span></div>
+      <div><b>500+</b><span>мероприятий</span></div><div><b>120+</b><span>статей</span></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

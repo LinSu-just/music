@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Покупка билета — Точка ритма</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="checkout.css">
+</head>
+<body class="checkout-page">
+  <header>
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="Точка ритма"></a>
+    <nav><a href="index.html#genres">Жанры</a><a href="index.html#events">События</a><a href="index.html#artists">Исполнители</a><a href="index.html#about">О проекте</a></nav>
+    <div class="actions"><button class="favorites-toggle" aria-label="Избранное"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="favorite-count">0</span></button><button class="menu" aria-label="Меню"><span></span><span></span></button></div>
+  </header>
+  <main class="checkout-shell">
+    <div class="steps"><button class="active" type="button" data-target="1"><b>1</b>Данные</button><i></i><button type="button" data-target="2"><b>2</b>Билет</button><i></i><button type="button" data-target="3"><b>3</b>Оплата</button></div>
+    <section class="checkout-stage active" data-stage="1">
+      <form class="checkout-card contact-form">
+        <h1>Контактные данные</h1><div class="two-fields"><label>Имя<input name="firstName" required value="Иван"></label><label>Фамилия<input name="lastName" required value="Петров"></label></div>
+        <label>E-mail<input name="email" type="email" required value="ivan.petrov@email.com"></label><label>Телефон<input name="phone" required value="+7 (999) 123-45-67"></label>
+        <label class="check"><input type="checkbox" checked> Хочу получать новости о событиях</label><button class="checkout-button" type="submit">Далее</button>
+      </form>
+      <aside class="order-card"><h2>Ваш заказ</h2><div class="order-event"><img src="assets/event-jazz.png"><p><b>Джазовый вечер</b><small>08 июня, 19:00<br>Сад «Эрмитаж»</small></p></div><p>Билет <span>× 1&nbsp;&nbsp; 3500 ₽</span></p><p>Сервисный сбор <span>350 ₽</span></p><strong>Итого <span>3850 ₽</span></strong></aside>
+    </section>
+    <section class="checkout-stage" data-stage="2">
+      <form class="checkout-card ticket-form">
+        <h1>Выберите билет</h1>
+        <label class="ticket-option selected"><input type="radio" name="ticket" value="standard" checked><span><b>Стандартный билет</b><small>Вход и свободная рассадка</small></span><strong>3500 ₽</strong></label>
+        <label class="ticket-option"><input type="radio" name="ticket" value="premium"><span><b>Билет у сцены</b><small>Первые ряды и отдельный вход</small></span><strong>5200 ₽</strong></label>
+        <div class="ticket-count"><span>Количество билетов</span><div><button type="button" data-count="-1">−</button><b id="ticket-quantity">1</b><button type="button" data-count="1">+</button></div></div>
+        <button class="checkout-button" type="submit">Перейти к оплате</button>
+      </form>
+      <aside class="order-card"><h2>Ваш заказ</h2><div class="order-event"><img src="assets/event-jazz.png"><p><b>Джазовый вечер</b><small>08 июня, 19:00<br>Сад «Эрмитаж»</small></p></div><p>Билет <span id="ticket-summary">× 1&nbsp;&nbsp; 3500 ₽</span></p><p>Сервисный сбор <span>350 ₽</span></p><strong>Итого <span id="ticket-total">3850 ₽</span></strong></aside>
+    </section>
+    <section class="checkout-stage" data-stage="3">
+      <aside class="order-card compact"><h2>Ваш заказ</h2><p>Билет <span id="payment-ticket-summary">× 1&nbsp;&nbsp; 3500 ₽</span></p><p>Сервисный сбор <span>350 ₽</span></p><strong>Итого <span id="payment-total">3850 ₽</span></strong></aside>
+      <form class="checkout-card payment-form"><h1>Способ оплаты</h1><div class="pay-tabs"><b>Карта</b><span>Apple Pay</span><span>Google Pay</span></div>
+        <label>Номер карты<input name="cardNumber" required inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000"></label>
+        <div class="two-fields"><label>Срок действия<input name="expiry" required maxlength="5" placeholder="ММ / ГГ"></label><label>CVC / CVV<input name="cvc" required maxlength="3" type="password" inputmode="numeric" placeholder="•••"></label></div>
+        <label>Имя на карте<input name="cardholder" required value="IVAN PETROV"></label><button class="checkout-button" id="payment-submit" type="submit">Оплатить 3850 ₽</button><small class="terms">Нажимая кнопку, вы соглашаетесь с условиями оферты</small>
+      </form>
+    </section>
+    <section class="checkout-success" data-stage="success"><div class="success-mark">✓</div><h1>Оплата прошла успешно!</h1><p>Билет отправлен на вашу почту<br><b id="success-email">ivan.petrov@email.com</b></p><a class="checkout-button" href="index.html#events">Перейти к моим билетам</a><a href="index.html">На главную</a></section>
+  </main>
+  <script src="script.js"></script><script src="checkout.js"></script>
+</body></html>
