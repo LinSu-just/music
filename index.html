@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>Точка ритма</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+  <main>
+    <section class="hero" id="home">
+      <header>
+        <a class="logo" href="#home" aria-label="Точка ритма">
+          <img src="assets/logo.png" alt="Точка ритма">
+        </a>
+        <nav aria-label="Основная навигация">
+          <a href="#genres">Жанры</a>
+          <a href="#events">События</a>
+          <a href="#artists">Исполнители</a>
+          <a href="#about">О проекте</a>
+        </nav>
+        <div class="actions">
+          <button class="favorites-toggle" aria-label="Избранное">
+            <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+            <span class="favorite-count">0</span>
+          </button>
+          <button aria-label="Профиль">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.8 20a7.3 7.3 0 0 1 14.4 0"/><circle cx="12" cy="12" r="10"/></svg>
+          </button>
+          <button class="menu" aria-label="Меню"><span></span><span></span></button>
+        </div>
+      </header>
+      <div class="hero-copy">
+        <h1>Откройте мир<br><em>музыкальных<br>жанров</em></h1>
+        <p>Исследуйте жанры, узнавайте истории<br>исполнителей и находите события рядом<br>с вами.</p>
+        <div class="hero-buttons">
+          <a class="button primary" href="#genres">Изучить жанры</a>
+          <a class="button secondary" href="#events">Смотреть события</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section genres" id="genres">
+      <div class="section-title"><h2>Популярные жанры</h2><a href="#">Смотреть все →</a></div>
+      <div class="genre-grid">
+        <a href="genre-jazz.html" data-genre="Джаз"><img src="assets/genre-jazz.png" alt="Джаз"><button class="genre-favorite" type="button" aria-label="Добавить Джаз в избранное">♥</button></a>
+        <a href="#" data-genre="Классика"><img src="assets/genre-classic.png" alt="Классика"><button class="genre-favorite" type="button" aria-label="Добавить Классику в избранное">♥</button></a>
+        <a href="#" data-genre="Панк"><img src="assets/genre-punk.png" alt="Панк"><button class="genre-favorite" type="button" aria-label="Добавить Панк в избранное">♥</button></a>
+        <a href="#" data-genre="Хип-хоп"><img src="assets/genre-hiphop.png" alt="Хип-хоп"><button class="genre-favorite" type="button" aria-label="Добавить Хип-хоп в избранное">♥</button></a>
+        <a href="#" data-genre="Электроника"><img src="assets/genre-electronic.png" alt="Электроника"><button class="genre-favorite" type="button" aria-label="Добавить Электронику в избранное">♥</button></a>
+      </div>
+    </section>
+
+    <section class="content-section subgenres" id="subgenres">
+      <div class="section-title"><h2>Поджанры электроники</h2><a href="#">Смотреть все →</a></div>
+      <div class="subgenre-grid">
+        <article class="subgenre-card techno">
+          <span class="sub-number">01</span>
+          <div class="pulse-art"><i></i><i></i><i></i></div>
+          <div class="sub-copy"><h3>Techno</h3><p>Индустриальный ритм</p></div>
+          <button class="play-subgenre" type="button" aria-label="Включить Techno"><span>▶</span></button>
+          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="subgenre-card house">
+          <span class="sub-number">02</span>
+          <div class="pulse-art"><i></i><i></i><i></i></div>
+          <div class="sub-copy"><h3>House</h3><p>Тёплый клубный грув</p></div>
+          <button class="play-subgenre" type="button" aria-label="Включить House"><span>▶</span></button>
+          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="subgenre-card trance">
+          <span class="sub-number">03</span>
+          <div class="pulse-art"><i></i><i></i><i></i></div>
+          <div class="sub-copy"><h3>Trance</h3><p>Мелодия и эйфория</p></div>
+          <button class="play-subgenre" type="button" aria-label="Включить Trance"><span>▶</span></button>
+          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="subgenre-card dnb">
+          <span class="sub-number">04</span>
+          <div class="pulse-art"><i></i><i></i><i></i></div>
+          <div class="sub-copy"><h3>Drum &amp; Bass</h3><p>Скорость и глубокий бас</p></div>
+          <button class="play-subgenre" type="button" aria-label="Включить Drum and Bass"><span>▶</span></button>
+          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="subgenre-card dubstep">
+          <span class="sub-number">05</span>
+          <div class="pulse-art"><i></i><i></i><i></i></div>
+          <div class="sub-copy"><h3>Dubstep</h3><p>Ломаные волны звука</p></div>
+          <button class="play-subgenre" type="button" aria-label="Включить Dubstep"><span>▶</span></button>
+          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section legends" id="legends">
+      <div class="section-title"><h2>Легенды жанра</h2><a href="#">Смотреть все →</a></div>
+      <div class="legend-grid">
+        <article class="legend-card daft-punk">
+          <div class="legend-photo"></div>
+          <span class="legend-index">01</span>
+          <div class="legend-info"><h3>Daft Punk</h3><p>Франция · с 1993</p></div>
+          <span class="legend-arrow">↗</span>
+        </article>
+        <article class="legend-card nina">
+          <div class="legend-photo"></div>
+          <span class="legend-index">02</span>
+          <div class="legend-info"><h3>Nina Kraviz</h3><p>Россия · Techno</p></div>
+          <span class="legend-arrow">↗</span>
+        </article>
+        <article class="legend-card deadmau5">
+          <div class="legend-photo"></div>
+          <span class="legend-index">03</span>
+          <div class="legend-info"><h3>Deadmau5</h3><p>Канада · Progressive</p></div>
+          <span class="legend-arrow">↗</span>
+        </article>
+        <article class="legend-card prodigy">
+          <div class="legend-photo"></div>
+          <span class="legend-index">04</span>
+          <div class="legend-info"><h3>The Prodigy</h3><p>Великобритания · Rave</p></div>
+          <span class="legend-arrow">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section events" id="events">
+      <div class="section-title"><h2>Ближайшие события</h2><a href="#">Смотреть все →</a></div>
+      <div class="event-grid">
+        <a class="event-link" href="event-jazz.html" aria-label="Открыть страницу джазового вечера">
+          <article style="--photo:url('assets/event-jazz.png')">
+            <span class="date"><b>10</b>мая</span>
+            <h3>Джазовый вечер<br>в саду “Эрмитаж”</h3><p>от 3500</p>
+          </article>
+        </a>
+        <article style="--photo:url('assets/event-hiphop.png')">
+          <span class="date"><b>15</b>мая</span>
+          <h3>Фестиваль Хип-хопа</h3><p>от 1000</p>
+        </article>
+        <article style="--photo:url('assets/event-rock.png')">
+          <span class="date"><b>19</b>мая</span>
+          <h3>Рок-концерт на<br>Лужниках</h3><p>от 3500</p>
+        </article>
+        <article style="--photo:url('assets/event-techno.png')">
+          <span class="date"><b>24</b>мая</span>
+          <h3>Техно вечеринка в<br>стиле 90-х</h3><p>от 3500</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section artists" id="artists">
+      <div class="section-title"><h2>Популярные исполнители</h2><a href="#">Смотреть все →</a></div>
+      <div class="artist-grid">
+        <figure><img src="assets/artist-rihanna.png" alt="Rihanna"><figcaption>Rihanna</figcaption></figure>
+        <figure><img src="assets/artist-linkin-park.png" alt="Linkin Park"><figcaption>Linkin Park</figcaption></figure>
+        <figure><img src="assets/artist-weeknd.png" alt="The Weeknd"><figcaption>The Weeknd</figcaption></figure>
+        <figure><img src="assets/artist-rammstein.png" alt="Rammstein"><figcaption>Rammstein</figcaption></figure>
+        <figure><img src="assets/artist-ed-sheeran.png" alt="Ed Sheeran"><figcaption>Ed Sheeran</figcaption></figure>
+        <figure><img src="assets/artist-lady-gaga.png" alt="Lady Gaga"><figcaption>Lady Gaga</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="stats" id="about">
+      <div><b>50+</b><span>жанров</span></div>
+      <div><b>1000+</b><span>исполнителей</span></div>
+      <div><b>500+</b><span>мероприятий</span></div>
+      <div><b>120+</b><span>статей</span></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
